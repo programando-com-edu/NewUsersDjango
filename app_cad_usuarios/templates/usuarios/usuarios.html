@@ -1,0 +1,16 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+        </tr>
+        {% for Usuario in usuarios %}
+        <tr>
+            <td>{{Usuario.id}}</td>
+            <td>{{Usuario.nome}}</td>
+            <td>{{Usuario.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
