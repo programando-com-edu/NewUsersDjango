@@ -1,20 +1,26 @@
 {% extends 'usuarios/base.html' %}
 {% block conteudo%}
 
-<div class="container-fluid">
+<div class="container">
     <table  class="table table-bordered table-striped">
         <tr>
             <th>id</th>
             <th>nome</th>
             <th>idade</th>
+            <th>ações</th>
         </tr>
         {% for Usuario in usuarios %}
         <tr>
             <td>{{Usuario.id_usuario}}</td>
             <td>{{Usuario.nome}}</td>
             <td>{{Usuario.idade}}</td>
+            <td>
+                <a href="/view/{{Usuario.id_usuario}}" type="button" class="btn btn-warning">Visualizar</a>
+                <a href="/edit/{{Usuario.id_usuario}}" type="button" class="btn btn-primary">Editar</a>
+                <a type="button" class="btn btn-danger">Deletar</a>
+            </td>
         </tr>
         {% endfor %}
     </table>
-</div>s
+</div>
 {% endblock %}
