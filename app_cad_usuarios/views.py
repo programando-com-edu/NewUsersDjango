@@ -17,3 +17,4 @@ def usuarios(request):
         form = UsuarioForm()
     usuarios = Usuario.objects.all()
     return render(request, 'usuarios/usuarios.html', {'form': form, 'usuarios': usuarios})
+

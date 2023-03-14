@@ -1,5 +1,8 @@
-<div class="container">
-    <table>
+{% extends 'usuarios/base.html' %}
+{% block conteudo%}
+
+<div class="container-fluid">
+    <table  class="table table-bordered table-striped">
         <tr>
             <th>id</th>
             <th>nome</th>
@@ -7,10 +10,11 @@
         </tr>
         {% for Usuario in usuarios %}
         <tr>
-            <td>{{Usuario.id}}</td>
+            <td>{{Usuario.id_usuario}}</td>
             <td>{{Usuario.nome}}</td>
             <td>{{Usuario.idade}}</td>
         </tr>
         {% endfor %}
     </table>
-</div>
+</div>s
+{% endblock %}
