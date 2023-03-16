@@ -36,3 +36,8 @@ def edit(request, pk):
     data['usuarios'] = usuario
     data['form'] = form
     return render(request, 'usuarios/edit.html', data)
+
+def delete(request, pk):
+    usuario = Usuario.objects.get(pk=pk)
+    usuario.delete()
+    return redirect('home')

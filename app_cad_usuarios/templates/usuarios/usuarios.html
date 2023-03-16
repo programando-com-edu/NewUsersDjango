@@ -17,10 +17,12 @@
             <td>
                 <a href="/view/{{Usuario.id_usuario}}" type="button" class="btn btn-warning">Visualizar</a>
                 <a href="/edit/{{Usuario.id_usuario}}" type="button" class="btn btn-primary">Editar</a>
-                <a type="button" class="btn btn-danger">Deletar</a>
+                <a href="/delete/{{Usuario.id_usuario}}"type="button" class="btn btn-danger btnDel">Deletar</a>
             </td>
         </tr>
         {% endfor %}
     </table>
+    {% load static %}
+    <script src="{%  static 'javascript.js'%}"></script>
 </div>
 {% endblock %}
